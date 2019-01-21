@@ -1,0 +1,14 @@
+name: my-build
+repo: osela/github-app-test3
+steps:
+- name: build
+  image: "golang:1.11"
+  env:
+  - name: GOPATH
+    value: "/workspace/go"
+  script: |
+    make build
+artifacts:
+- name: my-artifact
+  type: docker
+  dockerfile: "Dockerfile"
