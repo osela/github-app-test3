@@ -1,5 +1,5 @@
 name: my-build
-repo_url: git@github.com:osela/app-test.git
+repo_url: git@github.com:osela/app-repo.git
 steps:
 - name: build
   image: "golang:1.11"
