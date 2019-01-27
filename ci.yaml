@@ -9,6 +9,9 @@ steps:
   script: |
     make build
 artifacts:
-- name: my-artifact
+- name: artifact1
+  type: docker
+  dockerfile: "Dockerfile"
+- name: artifact2
   type: docker
   dockerfile: "Dockerfile"
