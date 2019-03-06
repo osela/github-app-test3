@@ -1,0 +1,16 @@
+name: my-build-tpl
+steps:
+- name: build
+  image: "golang:1.11"
+  env:
+  - name: GOPATH
+    value: "/workspace/go"
+  script: |
+    make build
+artifacts:
+- name: artifact1
+  type: docker
+  dockerfile: "Dockerfile"
+- name: artifact2
+  type: docker
+  dockerfile: "Dockerfile"

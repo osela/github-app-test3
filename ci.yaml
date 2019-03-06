@@ -1,19 +1,5 @@
-repo_urls:
-- git@github.com:osela/app-repo.git
+repo_url: git@github.com:osela/app-repo.git
 pipelines:
 - name: my-build
-  steps:
-  - name: build
-    image: "golang:1.11"
-    env:
-    - name: GOPATH
-      value: "/workspace/go"
-    script: |
-      make build
-  artifacts:
-  - name: artifact1
-    type: docker
-    dockerfile: "Dockerfile"
-  - name: artifact2
-    type: docker
-    dockerfile: "Dockerfile"
+  template: my-build-tpl
+  
