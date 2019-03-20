@@ -1,4 +1,4 @@
-repo_url: git@github.com:osela/app-repo.git
+repoURL: git@github.com:osela/app-repo.git
 pipelines:
 - name: my-build
   template: my-build-tpl
